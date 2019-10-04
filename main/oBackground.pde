@@ -18,20 +18,20 @@ class OBackground {
     
     for (int r = 0; r < rows; r++)
       for (int c = 0; c < cols; c++)
-        screen[r][c] = new Rect(r*rowSize, c*colSize, size, new Color(random(255), random(255),random(255)));
+        screen[r][c] = new Rect(r*rowSize, c*colSize, rowSize, new Color(random(255), random(255),random(255)));
   }
   
   void update(ArrayList<Ball> balls){
     for (int r = 0; r < rows; r++)
       for (int c = 0; c < cols; c++)
-        //screen[r][c].setColor(defaultColor);
+        screen[r][c].setColor(defaultColor);
         
     println(balls.size());
     for (Ball b : balls){
       //Rect screenSquare = screen[(int)b.getX() / rowSize][(int)b.getY() / colSize];
-      println((int)b.getX() / rowSize + "  " + ((int)b.getY() / colSize));
+      //println((int)b.getX() / rowSize + "  " + ((int)b.getY() / colSize));
       screen[(int)b.getX() / rowSize][(int)b.getY() / colSize].setColor(new Color(255,255,255));
-      // screen[(int)b.getX() / size][(int)b.getY() / size].setColor(defaultColor.averageColor(screenSquare.getColor()));
+      //screen[(int)b.getX() / size][(int)b.getY() / size].setColor(defaultColor.averageColor(screenSquare.getColor()));
       // screenSquare.getColor().clearAverage();
     }
   }
