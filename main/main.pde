@@ -5,10 +5,10 @@ int MAX_RADIUS = 50; // The maximum size of the Ball
 
 ArrayList<Ball> balls = new ArrayList<Ball>(); // Stores all the new balls created
 
-OBackground bg;
+CBackground bg;
 
 void setup(){
-    bg = new OBackground(BG_ROWS,BG_ROWS,SCREEN_SIZE,new Color(0,0,0));
+    bg = new CBackground(BG_ROWS,BG_ROWS,SCREEN_SIZE,new Color(0,0,0));
     size(800, 800);
 }
 
